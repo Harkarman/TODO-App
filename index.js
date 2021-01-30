@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 8000; //live deployment to port 8000
+const port = 8000; //live deployment to port 80
 
 const db = require("./config/mongoose");
 const Task = require("./models/task");
@@ -11,23 +11,23 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true })); //added extended:true to deal with error in terminal
 app.use(express.static("assets"));
 
-var taskList = [
-  {
-    description: "Get groceries",
-    date: "02-02-2021",
-    category: "Home",
-  },
-  {
-    description: "Pay phone bill",
-    date: "02-02-2021",
-    category: "Personal",
-  },
-  {
-    description: "Finish project",
-    date: "02-02-2021",
-    category: "School",
-  },
-];
+// var taskList = [
+//   {
+//     description: "Get groceries",
+//     date: "02-02-2021",
+//     category: "Home",
+//   },
+//   {
+//     description: "Pay phone bill",
+//     date: "02-02-2021",
+//     category: "Personal",
+//   },
+//   {
+//     description: "Finish project",
+//     date: "02-02-2021",
+//     category: "School",
+//   },
+// ];
 
 app.get("/", function (req, res) {
   Task.find({}, function (err, tasks) {
