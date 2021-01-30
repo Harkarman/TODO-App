@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do App</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+    />
+    <link rel="stylesheet" href="/css/app.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1>TODO App</h1>
+    </div>
+    <div>
+      <form action="#">
+        <div
+          class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+        >
+          <input
+            class="mdl-textfield__input"
+            type="text"
+            id="input-task"
+            placeholder="What do you need to do?"
+          />
+          <label class="mdl-textfield__label" for="input-task"
+            >Description</label
+          >
+        </div>
+        <br />
+        <div
+          class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label has-placeholder"
+        >
+          <select class="mdl-textfield__input" id="category" name="category">
+            <option>Choose a category</option>
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="school">School</option>
+            <option value="cleaning">Cleaning</option>
+            <option value="other">Other</option>
+          </select>
+          <label class="mdl-textfield__label" for="category">Category</label>
+        </div>
+        <br />
+        <div
+          class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label has-placeholder"
+        >
+          <input
+            class="mdl-textfield__input"
+            type="date"
+            id="input-date"
+            placeholder="DD/MM/YYYY"
+          />
+          <label class="mdl-textfield__label" for="input-date">Due Date</label>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
